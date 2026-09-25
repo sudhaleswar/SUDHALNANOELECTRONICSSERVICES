@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SudhaL Nanoelectronics Services | SNS</title>
+
+<meta name="description"
+content="SudhaL Nanoelectronics Services — Advanced FPGA, DSP, embedded, mixed-signal, semiconductor and quantum measurement engineering.">
+
+<style>
+
+/* ============================================================
+   GLOBAL
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050b14;
+    color: #e8f0f7;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(5, 11, 20, 0.86);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav {
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-symbol {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(135deg, #08a86b, #0879c9);
+
+    color: white;
+
+    font-weight: 800;
+    font-size: 13px;
+
+    box-shadow:
+        0 0 25px rgba(8,168,107,0.25);
+}
+
+.logo-text strong {
+    display: block;
+
+    font-size: 18px;
+    color: white;
+}
+
+.logo-text span {
+    display: block;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #35d49a;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #aebdcb;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: #35d49a;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero {
+    min-height: 100vh;
+
+    padding-top: 78px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(8,121,201,0.20),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 20% 75%,
+            rgba(8,168,107,0.13),
+            transparent 25%
+        );
+}
+
+
+/* animated circuit background */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        0.9fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    color: #35d49a;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 78px);
+
+    line-height: 1.03;
+
+    margin-bottom: 25px;
+
+    color: white;
+}
+
+.hero h1 span {
+    background:
+        linear-gradient(
+            90deg,
+            #0879c9,
+            #35d49a
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 680px;
+
+    font-size: 18px;
+
+    color: #9baaba;
+
+    margin-bottom: 32px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 13px 25px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.btn-primary {
+    background:
+        linear-gradient(
+            90deg,
+            #0879c9,
+            #08a86b
+        );
+
+    color: white;
+
+    box-shadow:
+        0 0 25px rgba(8,121,201,0.20);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(8,121,201,0.30);
+}
+
+.btn-outline {
+    border: 1px solid rgba(53,212,154,0.5);
+
+    color: #35d49a;
+
+    background: rgba(53,212,154,0.03);
+}
+
+.btn-outline:hover {
+    background: rgba(53,212,154,0.10);
+}
+
+
+/* ============================================================
+   CHIP VISUAL
+============================================================ */
+
+.chip-area {
+    height: 470px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.chip {
+    width: 290px;
+    height: 290px;
+
+    border-radius: 28px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17283d,
+            #08121f
+        );
+
+    border: 1px solid rgba(53,212,154,0.30);
+
+    box-shadow:
+        0 0 80px rgba(8,121,201,0.20),
+        inset 0 0 40px rgba(8,168,107,0.08);
+}
+
+.chip::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 32px;
+
+    border:
+        1px solid
+        rgba(53,212,154,0.40);
+
+    border-radius: 17px;
+}
+
+.chip::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0879c9,
+            #08a86b
+        );
+
+    box-shadow:
+        0 0 55px
+        rgba(8,168,107,0.35);
+}
+
+.chip-core {
+    z-index: 2;
+
+    font-size: 35px;
+    font-weight: 800;
+
+    color: white;
+}
+
+.chip-text {
+    position: absolute;
+
+    bottom: 38px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #6f8295;
+
+    z-index: 3;
+}
+
+.node {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #35d49a;
+
+    box-shadow:
+        0 0 12px #35d49a;
+}
+
+.node1 { top: 45px; left: 65px; }
+.node2 { top: 90px; right: 45px; }
+.node3 { bottom: 65px; left: 50px; }
+.node4 { bottom: 45px; right: 70px; }
+
+
+.floating {
+    position: absolute;
+
+    padding: 12px 17px;
+
+    border-radius: 8px;
+
+    background: rgba(13,26,42,0.9);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    color: #b9c9d8;
+
+    font-size: 11px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25);
+}
+
+.float1 {
+    top: 55px;
+    right: 0;
+}
+
+.float2 {
+    bottom: 55px;
+    left: 0;
+}
+
+
+/* ============================================================
+   SECTION
+============================================================ */
+
+section {
+    padding: 100px 0;
+}
+
+.section-label {
+    color: #35d49a;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 40px;
+
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #8495a7;
+
+    max-width: 700px;
+}
+
+
+/* ============================================================
+   SERVICES
+============================================================ */
+
+.services {
+    background: #07101c;
+}
+
+.service-grid {
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+    padding: 30px;
+
+    min-height: 245px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,35,53,0.85),
+            rgba(8,17,28,0.85)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.07);
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(53,212,154,0.35);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.25);
+}
+
+.service-number {
+    color: #0879c9;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 12px;
+
+    color: white;
+}
+
+.service-card p {
+    font-size: 14px;
+
+    color: #8193a6;
+}
+
+
+/* ============================================================
+   ABOUT
+============================================================ */
+
+.about {
+    background: #050b14;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about p {
+    color: #8999aa;
+
+    margin-bottom: 18px;
+}
+
+.about-list {
+    margin-top: 28px;
+
+    list-style: none;
+}
+
+.about-list li {
+    margin-bottom: 13px;
+
+    color: #c6d2dc;
+
+    font-size: 14px;
+}
+
+.about-list li::before {
+    content: "▹";
+
+    color: #35d49a;
+
+    margin-right: 10px;
+}
+
+
+/* expertise panel */
+
+.expertise {
+    padding: 35px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101f31,
+            #07101b
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+}
+
+.expertise h3 {
+    margin-bottom: 28px;
+}
+
+.expertise-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 16px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.07);
+
+    font-size: 14px;
+}
+
+.expertise-row span:last-child {
+    color: #35d49a;
+}
+
+
+/* ============================================================
+   TECHNOLOGY
+============================================================ */
+
+.technology {
+    background: #07101c;
+}
+
+.tech-grid {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.tech-box {
+    padding: 25px 15px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.07);
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.02);
+
+    transition: 0.25s;
+}
+
+.tech-box:hover {
+    border-color:
+        rgba(8,168,107,0.35);
+}
+
+.tech-box strong {
+    display: block;
+
+    color: white;
+
+    margin-bottom: 5px;
+}
+
+.tech-box span {
+    color: #687b8e;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   PROJECTS
+============================================================ */
+
+.projects {
+    background: #050b14;
+}
+
+.project-grid {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.project {
+    min-height: 270px;
+
+    padding: 32px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0c1928,
+            #07101b
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.07);
+}
+
+.project-tag {
+    color: #35d49a;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+.project h3 {
+    margin-top: 18px;
+
+    margin-bottom: 13px;
+
+    color: white;
+}
+
+.project p {
+    color: #7e90a3;
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   CONTACT
+============================================================ */
+
+.contact {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(8,121,201,0.14),
+            transparent 45%
+        ),
+        #07101c;
+}
+
+.contact .section-description {
+    margin: auto;
+}
+
+.contact-box {
+    margin-top: 40px;
+}
+
+.contact-email {
+    display: inline-block;
+
+    margin-bottom: 28px;
+
+    font-size: 22px;
+
+    color: #35d49a;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+    padding: 30px 0;
+
+    background: #03070d;
+
+    text-align: center;
+
+    color: #657487;
+
+    font-size: 12px;
+}
+
+footer strong {
+    color: #35d49a;
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media(max-width: 900px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .hero-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chip-area {
+        height: 380px;
+    }
+
+    .service-grid,
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media(max-width: 600px) {
+
+    section {
+        padding: 70px 0;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .service-grid,
+    .project-grid,
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .chip {
+        width: 230px;
+        height: 230px;
+    }
+
+    .chip::after {
+        width: 120px;
+        height: 120px;
+    }
+
+    .float1 {
+        right: -10px;
+    }
+
+    .float2 {
+        left: -10px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+
+<div class="logo-symbol">
+SNS
+</div>
+
+<div class="logo-text">
+
+<strong>SudhaL</strong>
+
+<span>
+NANOELECTRONICS SERVICES
+</span>
+
+</div>
+
+</a>
+
+
+<nav>
+
+<ul>
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#technology">Technology</a>
+</li>
+
+<li>
+<a href="#projects">Projects</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+
+<div>
+
+<div class="hero-label">
+SUDHAL NANOELECTRONICS SERVICES
+</div>
+
+
+<h1>
+
+Advanced
+<span>Electronics</span>
+<br>
+
+for the Future
+
+</h1>
+
+
+<p>
+
+Engineering solutions for FPGA, digital signal processing,
+mixed-signal systems, semiconductor development and
+precision measurement technologies.
+
+</p>
+
+
+<div class="buttons">
+
+<a href="#services"
+class="btn btn-primary">
+Explore Our Expertise
+</a>
+
+<a href="#contact"
+class="btn btn-outline">
+Contact SNS
+</a>
+
+</div>
+
+</div>
+
+
+<div class="chip-area">
+
+
+<div class="floating float1">
+FPGA • DSP • RTL
+</div>
+
+
+<div class="chip">
+
+<div class="node node1"></div>
+<div class="node node2"></div>
+<div class="node node3"></div>
+<div class="node node4"></div>
+
+<div class="chip-core">
+SNS
+</div>
+
+<div class="chip-text">
+NANOELECTRONICS
+</div>
+
+</div>
+
+
+<div class="floating float2">
+QUANTUM • MIXED SIGNAL
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ============================================================
+     SERVICES
+============================================================ -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-label">
+Engineering Capabilities
+</div>
+
+<h2 class="section-title">
+Technology & Engineering Services
+</h2>
+
+<p class="section-description">
+
+From RTL architecture to complete measurement systems,
+SNS develops hardware and software solutions for
+advanced electronics applications.
+
+</p>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+
+<div class="service-number">
+01 / FPGA
+</div>
+
+<h3>
+FPGA & RTL Engineering
+</h3>
+
+<p>
+
+Verilog/SystemVerilog RTL development,
+FPGA architecture, timing optimization,
+high-speed interfaces and hardware acceleration.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+02 / DSP
+</div>
+
+<h3>
+Digital Signal Processing
+</h3>
+
+<p>
+
+NCO, CORDIC, FIR, FFT, digital lock-in amplifier,
+real-time filtering and precision signal-processing
+architectures.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+03 / MIXED SIGNAL
+</div>
+
+<h3>
+ADC / DAC Systems
+</h3>
+
+<p>
+
+High-speed ADC/DAC interfaces, data acquisition,
+signal conditioning and FPGA-based mixed-signal
+processing.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+04 / CONTROL
+</div>
+
+<h3>
+Real-Time Control
+</h3>
+
+<p>
+
+FPGA-based PID, feedback control,
+precision measurement and closed-loop
+instrumentation systems.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+05 / SEMICONDUCTOR
+</div>
+
+<h3>
+IC & Semiconductor R&D
+</h3>
+
+<p>
+
+Digital and mixed-signal semiconductor
+architecture, design exploration and
+system-level prototyping.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+06 / QUANTUM
+</div>
+
+<h3>
+Quantum Measurement Electronics
+</h3>
+
+<p>
+
+Precision electronics and FPGA systems
+for quantum sensing, measurement and
+emerging quantum technologies.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+
+<div>
+
+<div class="section-label">
+About SNS
+</div>
+
+<h2 class="section-title">
+
+Engineering at the
+intersection of hardware,
+DSP and semiconductors.
+
+</h2>
+
+
+<p>
+
+SudhaL Nanoelectronics Services is an engineering
+and technology initiative focused on advanced
+electronics, semiconductor systems and
+nanoelectronics-oriented applications.
+
+</p>
+
+
+<p>
+
+Our approach combines analog and digital electronics,
+FPGA architecture, digital signal processing,
+embedded systems and semiconductor technologies
+to create practical high-performance solutions.
+
+</p>
+
+
+<ul class="about-list">
+
+<li>
+System Architecture & Prototyping
+</li>
+
+<li>
+FPGA / RTL Hardware Development
+</li>
+
+<li>
+High-Speed Data Acquisition
+</li>
+
+<li>
+Digital Signal Processing
+</li>
+
+<li>
+Mixed-Signal Electronics
+</li>
+
+<li>
+Precision Measurement Systems
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="expertise">
+
+<h3>
+SNS Engineering Focus
+</h3>
+
+
+<div class="expertise-row">
+
+<span>
+FPGA / RTL
+</span>
+
+<span>
+Advanced
+</span>
+
+</div>
+
+
+<div class="expertise-row">
+
+<span>
+Digital Signal Processing
+</span>
+
+<span>
+Real-Time
+</span>
+
+</div>
+
+
+<div class="expertise-row">
+
+<span>
+Mixed-Signal
+</span>
+
+<span>
+High-Speed
+</span>
+
+</div>
+
+
+<div class="expertise-row">
+
+<span>
+Embedded Systems
+</span>
+
+<span>
+Integrated
+</span>
+
+</div>
+
+
+<div class="expertise-row">
+
+<span>
+Semiconductor R&D
+</span>
+
+<span>
+Innovation
+</span>
+
+</div>
+
+
+<div class="expertise-row">
+
+<span>
+Quantum Electronics
+</span>
+
+<span>
+Emerging
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ============================================================
+     TECHNOLOGY
+============================================================ -->
+
+<section class="technology" id="technology">
+
+<div class="container">
+
+<div class="section-label">
+Technology
+</div>
+
+<h2 class="section-title">
+Our Technology Stack
+</h2>
+
+<p class="section-description">
+
+Hardware and software technologies used to develop
+advanced electronic systems.
+
+</p>
+
+
+<div class="tech-grid">
+
+
+<div class="tech-box">
+
+<strong>
+AMD / Xilinx FPGA
+</strong>
+
+<span>
+FPGA Platforms
+</span>
+
+</div>
+
+
+<div class="tech-box">
+
+<strong>
+Verilog / RTL
+</strong>
+
+<span>
+Digital Hardware
+</span>
+
+</div>
+
+
+<div class="tech-box">
+
+<strong>
+DSP
+</strong>
+
+<span>
+Real-Time Processing
+</span>
+
+</div>
+
+
+<div class="tech-box">
+
+<strong>
+Python
+</strong>
+
+<span>
+Control & Analysis
+</span>
+
+</div>
+
+
+<div class="tech-box">
+
+<strong>
+ADC / DAC
+</strong>
+
+<span>
+Mixed Signal
+</span>
+
+</div>
+
+
+<div class="tech-box">
+
+<strong>
+ARM
+</strong>
+
+<span>
+Embedded Processing
+</span>
+
+</div>
+
+
+<div class="tech-box">
+
+<strong>
+Linux
+</strong>
+
+<span>
+Embedded Software
+</span>
+
+</div>
+
+
+<div class="tech-box">
+
+<strong>
+Scientific Instrumentation
+</strong>
+
+<span>
+Measurement Systems
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ============================================================
+     PROJECTS
+============================================================ -->
+
+<section class="projects" id="projects">
+
+<div class="container">
+
+<div class="section-label">
+Research & Development
+</div>
+
+<h2 class="section-title">
+Selected Technology Areas
+</h2>
+
+<p class="section-description">
+
+SNS engineering capabilities can be applied across
+scientific instrumentation, semiconductor systems
+and advanced measurement technologies.
+
+</p>
+
+
+<div class="project-grid">
+
+
+<div class="project">
+
+<div class="project-tag">
+FPGA / DSP
+</div>
+
+<h3>
+Digital Lock-In Amplifier
+</h3>
+
+<p>
+
+FPGA-based signal generation,
+synchronous detection, digital filtering
+and precision measurement.
+
+</p>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-tag">
+CONTROL SYSTEMS
+</div>
+
+<h3>
+FPGA-Based PID Control
+</h3>
+
+<p>
+
+Real-time ADC feedback, floating-point
+PID processing, NCO-based actuation
+and DAC monitoring.
+
+</p>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-tag">
+QUANTUM ELECTRONICS
+</div>
+
+<h3>
+Precision Measurement
+</h3>
+
+<p>
+
+Electronic systems for precision sensing,
+measurement and emerging quantum
+technology applications.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-label">
+Connect With SNS
+</div>
+
+<h2 class="section-title">
+
+Let's Build the
+Next Generation of Electronics.
+
+</h2>
+
+<p class="section-description">
+
+For FPGA, DSP, embedded, mixed-signal,
+semiconductor or advanced measurement
+engineering requirements, contact SudhaL
+Nanoelectronics Services.
+
+</p>
+
+
+<div class="contact-box">
+
+<div class="contact-email">
+
+your-email@example.com
+
+</div>
+
+<br>
+
+
+<a href="mailto:your-email@example.com"
+class="btn btn-primary">
+
+Start a Conversation
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+
+<footer>
+
+<div class="container">
+
+© 2026
+<strong>SudhaL Nanoelectronics Services</strong>
+&nbsp; | &nbsp;
+SNS
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
+
